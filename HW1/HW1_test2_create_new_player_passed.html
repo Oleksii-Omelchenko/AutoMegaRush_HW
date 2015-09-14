@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://193.138.245.222:81/" />
+<title>HW1_test2_create_new_player_passed</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">HW1_test2_create_new_player_passed</td></tr>
+</thead><tbody>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>XPath=//a[contains(text(),'ID')]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeText</td>
+	<td>//parent::tbody/child::tr[position()=2]/child::td[position()=3]</td>
+	<td>player</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${player}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>XPath=//a[text()='Insert']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players - Insert</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${player}&quot;.split(&quot;_&quot;)[0]</td>
+	<td>first</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${first}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>&quot;${player}&quot;.split(&quot;_&quot;)[1]</td>
+	<td>last</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${last}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>storeEval</td>
+	<td>storedVars['last']=${last}+1</td>
+	<td>new</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${new}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${first}_${new}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>@test.com</td>
+	<td>mail</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${mail}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_login']</td>
+	<td>${first}_${new}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_email']</td>
+	<td>${first}_${new}${mail}</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>012345</td>
+	<td>pasvar</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${passvar}</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__us_password']</td>
+	<td>${pasvar}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>XPath=//input[@id='ff14642ac1c__confirm_password']</td>
+	<td>${pasvar}</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[id='ff14642ac1c__us_fname']</td>
+	<td>${first}_${new}_first_name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[id='ff14642ac1c__us_lname']</td>
+	<td>${first}_${new}_last_name</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[id='ff14642ac1c__us_city']</td>
+	<td>${first}_${new}_city</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select[id='ff14642ac1c__us_country']</td>
+	<td>label=CANADA</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=textarea[id='ff14642ac1c__us_address']</td>
+	<td>${first}_${new}_adress</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>css=input[id='ff14642ac1c__us_phone']</td>
+	<td>${first}_${new}_+038</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>css=select[id='ff14642ac1c__us_gender']</td>
+	<td>label=Male</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=ff14642ac1c__us_birthday</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=select.ui-datepicker-month</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>LOCATOR_DETECTION_FAILED</td>
+	<td>label=Mar</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=select.ui-datepicker-year</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>LOCATOR_DETECTION_FAILED</td>
+	<td>label=1987</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=9</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>XPath=//input[@type='button'][@value='Save']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyTitle</td>
+	<td>Players</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
