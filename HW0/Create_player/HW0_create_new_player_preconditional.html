@@ -4,22 +4,42 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://193.138.245.222:81/" />
-<title>HW1_test2_postconditional_logout_passed</title>
+<title>New Test</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">HW1_test2_postconditional_logout_passed</td></tr>
+<tr><td rowspan="1" colspan="3">New Test</td></tr>
 </thead><tbody>
 <tr>
-	<td>click</td>
-	<td>XPath=//a[img [@alt='logout']][span[@class='logout']]</td>
+	<td>store</td>
+	<td>javascript{(&quot;oav&quot;+((new Date().getMonth()) +1)+(new Date().getDate().toString())+new Date().getHours() + new Date().getMinutes() + new Date().getSeconds())}</td>
+	<td>test_name</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>@test.com</td>
+	<td>mail</td>
+</tr>
+<tr>
+	<td>store</td>
+	<td>012345</td>
+	<td>password</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${test_name}</td>
 	<td></td>
 </tr>
 <tr>
-	<td>assertTextPresent</td>
+	<td>echo</td>
+	<td>${mail}</td>
 	<td></td>
-	<td>login</td>
+</tr>
+<tr>
+	<td>echo</td>
+	<td>${password}</td>
+	<td></td>
 </tr>
 </tbody></table>
 </body>
