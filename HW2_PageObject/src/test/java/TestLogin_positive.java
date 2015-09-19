@@ -12,8 +12,8 @@ public class TestLogin_positive {
         driver =  new FirefoxDriver();
         driver.get("http://193.138.245.222:81/auth/login");
         LoginPageObject loginPage = new LoginPageObject(driver);
-        LoginPageObject.typeName("admin");
-        LoginPageObject.typePassword("123");
-        LoginPageObject.clickOnButtonLogin();
+        loginPage.typeName("admin");
+        loginPage.typePassword("123");
+        loginPage.clickOnButtonLogin();
     }
 }

@@ -1,5 +1,9 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 
 /**
  * Created by Admin on 19.09.2015.
@@ -7,7 +11,7 @@ import org.openqa.selenium.WebDriver;
 public class LoginPageObject {
     private WebDriver driver;
 
-/*    //username
+    //username
     @FindBy(id = "username")
     WebElement login;
     //password
@@ -16,10 +20,12 @@ public class LoginPageObject {
     //login button
     @FindBy(id = "logIn")
     WebElement loginButton;
-    */
+
+
 
     public LoginPageObject(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     public void typeName(String login) {
@@ -35,5 +41,6 @@ public class LoginPageObject {
 
     public void clickOnButtonLogin() {
         driver.findElement(By.id("logIn")).click();
+
     }
 }
